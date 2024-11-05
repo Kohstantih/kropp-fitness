@@ -1,0 +1,47 @@
+.training-types {
+  position: relative;
+
+  padding-block: 70px 120px;
+
+  background-color: var(--color-dark);
+}
+
+.training-types-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 60px;
+}
+
+.training-types-item {
+  --bg-icon-size: 80px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 32px;
+  padding-top: var(--bg-icon-size);
+
+  background: url('icons/arrow-training.svg') 100% 0 / var(--bg-icon-size) no-repeat;
+}
+
+@media (width < 1280px) {
+  .training-types-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width < 768px) {
+  .training-types-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .training-types-item {
+    --bg-icon-size: 50px;
+    row-gap: 10px;
+  }
+
+  .training-types-image {
+    max-width: 120px;
+  }
+}

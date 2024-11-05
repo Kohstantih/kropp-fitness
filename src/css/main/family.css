@@ -1,0 +1,45 @@
+.family-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+  padding-block: 132px 62px;
+
+  text-align: center;
+}
+
+.family-images-list {
+  display: flex;
+  column-gap: 26px;
+
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.family-images-item {
+  flex: none;
+
+  scroll-snap-align: start;
+}
+
+@media (width < 1024px) {
+  .family-image {
+    width: auto;
+    height: 360px;
+  }
+}
+
+@media (width < 768px) {
+  .family-header {
+    padding-block: 80px 50px;
+  }
+
+  .family-images-list {
+    column-gap: 12px;
+  }
+
+  .family-image {
+    width: auto;
+    height: 180px;
+  }
+}
